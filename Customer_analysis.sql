@@ -1,0 +1,7 @@
+SELECT
+    customer_id,
+    COUNT(order_id) AS total_orders,
+    SUM(order_amount) AS total_spent
+FROM orders
+GROUP BY customer_id
+ORDER BY total_spent DESC;
